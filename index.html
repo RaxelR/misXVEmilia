@@ -11,12 +11,12 @@
    
         body {
             margin: 1;
-            padding: 10px;
+            padding: 0px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f5f5f5;
+            background-color: #3e024f;
             font-family: 'Playfair Display', serif;
         }
         
@@ -88,15 +88,39 @@
         .name {
             font-family: 'Great Vibes', cursive;
             font-size: 3em;
-            color: rgb(212, 175, 55);
+            color: rgb(228, 0, 0);
             margin: 20px 0;
         }
-h3{
-    font-family: 'Great Vibes', cursive;
-            font-size: 3.5em;
-            text-shadow: 2px 2px 4px rgba(221, 181, 49, 0.594);
-            margin: 0px 0;
+        @keyframes colorGlow {
+    0% {
+        color: #efb810; /* Primer color */
+        text-shadow: 2px 2px 4px rgba(221, 49, 221, 0.6), 
+                     0 0 10px rgba(221, 49, 221, 0.8), 
+                     0 0 20px rgba(221, 49, 221, 1);
+    }
+    50% {
+        color: #efb810; /* Segundo color */
+        text-shadow: 2px 2px 4px rgba(49, 221, 159, 0.6), 
+                     0 0 10px rgba(49, 221, 159, 0.8), 
+                     0 0 20px rgba(49, 221, 159, 1),
+                     0 0 30px rgba(49, 221, 159, 1);
+    }
+    100% {
+        color: #ff0000;
+        text-shadow: 2px 2px 4px rgba(221, 49, 221, 0.6), 
+                     0 0 10px rgba(221, 49, 221, 0.8), 
+                     0 0 20px rgba(221, 49, 221, 1);
+    }
 }
+
+h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5em;
+    margin: 0px;
+    animation: colorGlow 10s infinite ease-in-out; /* Aplica la animación */
+}
+
+
         .details {
             font-size: 1.1em;
             line-height: 1.6;
@@ -146,7 +170,7 @@ h3{
         .music-button {
             position: absolute;
             top: 25px;
-            left: 15%;
+            left: 10%;
             transform: translateX(-50%);
             background-color: rgb(255, 255, 255);
             color: rgb(212, 175, 55);
@@ -250,33 +274,34 @@ h3{
         <button class="music-button" aria-label="Reproducir música" onclick="toggleMusic()">♪</button>
         <div class="border"></div>
         <div class="content">
-            
-            <h1 class="title">Sr.Francisco Espinosa Martinez <br> y</h1>
-            
-            <h1 class="title">Sra.Viviana Lozada Rojas</h1>
-                <p> SE COMPLACEN EN INVITAR A USTED A LA CELEBRACIÓN <br>DE SU HIJA. </p>
-                    <h3 class="h3">Emilia Espinosa Lozada</h3>    
-                    <h3 class="h3">Mis XV Años </h3>    
+            <p>TE INVITO A MIS </p>
+            <h3 class="h3">XV Años </h3>  
+            <h3 class="h3">Emilia Espinosa Lozada</h3>
+            <p>MIS PADRES</p>
+            <h1 class="title">Francisco Espinosa Martinez <br> y</h1>
+            <h1 class="title">Viviana Lozada Rojas</h1>
+                <p> NOS  COMPLACE INVITAR A USTED Y A SU APRECIABLE FAMILIA </br>A LA CEREMONIA RELIGIOSA
+
+                <p>QUE SE LLEVARA ACABÓ EL DÍA 25 DE DICIEMBRE DE 2024 <br>  A LAS 2:00PM EN LA PARROQUIA DE SAN JUAN BAUTISTA </p>            
+                     
             <div class="details">
-                <p>QUE SE CELEBRARÁ EL DÍA 25 DE DICIEMBRE 2024<br>
-                EN LA PARROQUIA DE SAN JUAN BAUTISTA </p>
+                
                 <a href="https://maps.app.goo.gl/3AFrxUEbgAW8AXvr7" target="_blank" class="image-button">
                     <img src="iglesia-Photoroom.png" alt="Botón con imagen">
                 </a>
-                <p class="location">LA MISA SE llEBARRA ACABO A LAS 2:00PM <br>
-                PADRINOS </p>
-                <h1 class="title"> Gabriela Espinoza </h1>
+                <p>MIS PADRINOS</p>
+                <h1 class="title"> Gabriela Espinoza </br>Y</h1>
                 <h1 class="title"> Reyes Garcia</h1>
-                <p>La recepcion se llevara acabo en el<br>
-                SALON EL CRISTO  <br>
-                BARRANCA DE TEMAZCAL #97 BARRIO DE SAN ANTONIO</p>
+                <p>DESPUÉS DE LA CEREMONIA RELIGIOSA, ESPERAMOS CONTAR CON SU APRECIABLE PRESENCIA. </p>
+                <p>LA RECEPCIÓN SE LLEVARÁ A CABO  EN EL <br>SALÓN EL CRISTO UBICADO 
+            EN BARRANCA DE TEMAZCAL #97 BARRIO DE SAN ANTONIO</p>
             </div>
             <a href="https://maps.app.goo.gl/mF1b4Eock1p6q8iq7" target="_blank" class="image-button">
                 <img src="iglesia-Photoroom12.png" alt="Botón con imagen"> </a>
-            <p class="rsvp">
-                "Con mucho cariño, espero contar con su presencia en este día tan especial. <br>Será un honor compartir mis 15 años con ustedes."
-                "<br>
-                "Atte: Emilia Espinoza Rojas "</p>
+                <p>"CON MUCHO CARINO ESPERO CONTAR CON SU PRESENCIA EN ESTE DÍA TAN ESPECIAL."<br>
+                    "Atte: Emilia Espinoza Rojas "</p>
+                <p class="rsvp">
+                A.R</p>
         </div>
         <img src="/placeholder.svg?height=100&width=100" alt="" class="decoration rose-top-left" aria-hidden="true">
         <img src="/placeholder.svg?height=100&width=100" alt="" class="decoration rose-bottom-right" aria-hidden="true">
