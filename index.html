@@ -18,6 +18,7 @@
             min-height: 100vh;
             background-color: #f5f5dc;
             font-family: 'Playfair Display', serif;
+            
         }
         
 
@@ -31,8 +32,6 @@
     position: relative;
     overflow: hidden;
     animation: backgroundAnimation 40s ease infinite; /* Duración de la animación */
-
-   
 
 }
 
@@ -60,6 +59,7 @@
   
       margin: 0;
       padding: 0;
+      
         }
 
         .content {
@@ -121,11 +121,43 @@ h3 {
 }
 
 
-        .details {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #000000;
-        }
+@keyframes shadowMove {
+    0% {
+        text-shadow: 
+            -1px -1px 2px #ad8a1f, /* Contorno rojo */
+            1px 1px 4px rgba(37, 37, 37, 0.5); /* Sombra inicial */
+    }
+    25% {
+        text-shadow: 
+            -1px -1px 2px #ad8a1f, /* Contorno rojo */
+            2px 2px 8px hsla(0, 0%, 42%, 0.651); /* Sombra más lejos */
+    }
+    50% {
+        text-shadow: 
+            -1px -1px 2px #ad8a1f, /* Contorno rojo */
+            -2px -2px 8px rgba(37, 37, 37, 0.5); /* Sombra al lado opuesto */
+    }
+    75% {
+        text-shadow: 
+            -1px -1px 2px #ad8a1f, /* Contorno rojo */
+            1px 1px 4px rgb(0, 0%, 42%, 0.651); /* Sombra cerca */
+    }
+    100% {
+        text-shadow: 
+            -1px -1px 2px #ad8a1f, /* Contorno rojo */
+            -1px -1px 2px rgba(37, 37, 37, 0.5); /* Regresa al punto inicial */
+    }
+
+    
+}
+
+.details {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #000000; /* Color principal del texto */
+    animation: shadowMove 30s infinite ease-in-out; /* Aplica la animación */
+}
+
 
         .location {
             font-style: italic;
@@ -274,34 +306,38 @@ h3 {
         <button class="music-button" aria-label="Reproducir música" onclick="toggleMusic()">♪</button>
         <div class="border"></div>
         <div class="content">
+            
             <p>TE INVITO A MIS </p>
             <h3 class="h3">XV Años </h3>  
             <h3 class="h3">Emilia Espinosa Lozada</h3>
+            <div class="details">
             <p>MIS PADRES</p>
-            <h1 class="title">Francisco Espinosa Martinez <br> y</h1>
+            <h1 class="title">Francisco Espinosa Martínez <br> y</h1>
             <h1 class="title">Viviana Lozada Rojas</h1>
                 <p> NOS  COMPLACE INVITAR A USTED Y A SU APRECIABLE FAMILIA </br>A LA CEREMONIA RELIGIOSA
 
-                <p>QUE SE LLEVARA ACABÓ EL DÍA 25 DE DICIEMBRE DE 2024 <br>  A LAS 2:00PM EN LA PARROQUIA DE SAN JUAN BAUTISTA </p>            
+                <p>QUE SE LLEVARÁ ACABO EL DÍA 25 DE DICIEMBRE DE 2024 <br>  A LAS 2:00PM EN LA PARROQUIA DE SAN JUAN BAUTISTA </p>            
                      
-            <div class="details">
+            
                 
                 <a href="https://maps.app.goo.gl/3AFrxUEbgAW8AXvr7" target="_blank" class="image-button">
                     <img src="iglesia-Photoroom.png" alt="Botón con imagen">
                 </a>
                 <p>MIS PADRINOS</p>
-                <h1 class="title"> Gabriela Espinoza </br>Y</h1>
+                <h1 class="title"> Gabriela Espinosa </br>Y</h1>
                 <h1 class="title"> Reyes Garcia</h1>
-                <p>DESPUÉS DE LA CEREMONIA RELIGIOSA, ESPERAMOS CONTAR CON SU APRECIABLE PRESENCIA. </p>
-                <p>LA RECEPCIÓN SE LLEVARÁ A CABO  EN EL <br>SALÓN EL CRISTO UBICADO 
+                <p>DESPUÉS DE LA CEREMONIA RELIGIOSA, <br>ESPERAMOS CONTAR CON SU PRESENCIA <br>
+                EN LA RECEPCIÓN QUE SE LLEVARÁ A CABO  EN EL <br>SALÓN EL CRISTO UBICADO 
             EN BARRANCA DE TEMAZCAL #97 BARRIO DE SAN ANTONIO</p>
-            </div>
+            
             <a href="https://maps.app.goo.gl/mF1b4Eock1p6q8iq7" target="_blank" class="image-button">
                 <img src="iglesia-Photoroom12.png" alt="Botón con imagen"> </a>
-                <p>"CON MUCHO CARINO ESPERO CONTAR CON SU PRESENCIA EN ESTE DÍA TAN ESPECIAL."<br>
-                    "Atte: Emilia Espinoza Lozada "</p>
+                <p>"CON MUCHO CARIÑO TE ESPERO <br>EN ESTE DÍA TAN ESPECIAL."<br>
+                    "Atte: Emilia Espinosa Lozada "</p>
+                </div>
                 <p class="rsvp">
                 A.R</p>
+                
         </div>
         <img src="/placeholder.svg?height=100&width=100" alt="" class="decoration rose-top-left" aria-hidden="true">
         <img src="/placeholder.svg?height=100&width=100" alt="" class="decoration rose-bottom-right" aria-hidden="true">
@@ -350,3 +386,4 @@ h3 {
 </div>
 </body>
 </html>
+
